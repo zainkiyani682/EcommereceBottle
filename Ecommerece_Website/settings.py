@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-
+import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -143,3 +143,5 @@ PAYPAL_TEST = True
 JET_SIDE_MENU_COMPACT=True
 
 EMAIL_BACKEN='django.coremail.backends.console.EmailBackend'
+
+django_heroku.settings(locals())
